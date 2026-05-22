@@ -1,7 +1,7 @@
-[gd_scene load_steps=9 format=4 uid="uid://2vvep7bqnr1r"]
+[gd_scene load_steps=8 format=4 uid="uid://2vvep7bqnr1r"]
 
-[ext_resource type="Texture2D" uid="uid://bbpvdtyehcu5c" path="res://assets/Pixel Art Platformer - Village Props v2.3.0/Texture/TX Tileset Ground.png" id="1_5gx2l"]
 [ext_resource type="PackedScene" uid="uid://dwm841xtadpl5" path="res://player/player.tscn" id="1_7lnir"]
+[ext_resource type="TileSet" uid="uid://mb4it02rny2y" path="res://level/tileset_ground.tres" id="1_vkbyq"]
 [ext_resource type="Texture2D" uid="uid://b1dcjmsap6ghs" path="res://assets/Pixel Art Platformer - Village Props v2.3.0/Texture/TX Village Props.png" id="2_vkbyq"]
 [ext_resource type="Texture2D" uid="uid://bp4cdrp4jkbw6" path="res://assets/background/pixil-frame-0 (86).png" id="3_qohg2"]
 
@@ -852,10 +852,6 @@ texture = ExtResource("2_vkbyq")
 57:23/0 = 0
 58:23/0 = 0
 59:23/0 = 0
-1:24/size_in_atlas = Vector2i(3, 2)
-1:24/0 = 0
-6:24/size_in_atlas = Vector2i(3, 2)
-6:24/0 = 0
 24:24/0 = 0
 25:24/0 = 0
 26:24/0 = 0
@@ -1124,8 +1120,6 @@ texture = ExtResource("2_vkbyq")
 13:36/0 = 0
 15:36/0 = 0
 18:36/0 = 0
-22:36/size_in_atlas = Vector2i(4, 2)
-22:36/0 = 0
 56:36/0 = 0
 57:36/0 = 0
 2:37/0 = 0
@@ -1478,8 +1472,14 @@ texture = ExtResource("2_vkbyq")
 36:35/0 = 0
 10:24/size_in_atlas = Vector2i(6, 2)
 10:24/0 = 0
-4:24/size_in_atlas = Vector2i(2, 2)
-4:24/0 = 0
+22:35/size_in_atlas = Vector2i(4, 3)
+22:35/0 = 0
+4:23/size_in_atlas = Vector2i(2, 3)
+4:23/0 = 0
+6:23/size_in_atlas = Vector2i(3, 3)
+6:23/0 = 0
+1:23/size_in_atlas = Vector2i(3, 3)
+1:23/0 = 0
 
 [sub_resource type="TileSet" id="TileSet_44x8d"]
 sources/0 = SubResource("TileSetAtlasSource_ktfr2")
@@ -1491,13 +1491,13 @@ tile_map_data = PackedByteArray("AAAAAAcAAAABAAAAAAABAAcAAAABAAAAAAACAAcAAAABAAA
 tile_set = SubResource("TileSet_7lnir")
 
 [node name="TileMap_Plants" type="TileMapLayer" parent="."]
-tile_map_data = PackedByteArray("AAA+AAkAAAArAB0AAAA4AA0AAAAYAB0AAAA8AA0AAAAaACEAAAAkAAsAAAAYAB8AAAAiAAsAAAAcAB0AAAA=")
+tile_map_data = PackedByteArray("AAA+AAkAAAArAB0AAAA4AA0AAAAYAB0AAAA8AA0AAAAaACEAAAAkAAsAAAAYAB8AAAAiAAsAAAAcAB0AAAAAAA0AAAAaAB0AAABWAAwAAAAWACMAAAA=")
 tile_set = SubResource("TileSet_44x8d")
 
 [node name="Player" parent="." instance=ExtResource("1_7lnir")]
 position = Vector2(100, 153)
 
-[node name="PixilFrame0(86)" type="Sprite2D" parent="Player"]
+[node name="Background_Sky" type="Sprite2D" parent="Player"]
 z_index = -1
 position = Vector2(612, -58)
 scale = Vector2(2.9816663, 1)
