@@ -1,0 +1,95 @@
+[gd_scene load_steps=14 format=3 uid="uid://8ntfd8s7s0uo"]
+
+[ext_resource type="Script" uid="uid://vf71cek5fhvk" path="res://companion/companion.gd" id="1_413gl"]
+[ext_resource type="Texture2D" uid="uid://djhsxvqrdonrn" path="res://companion/Begleiter_Flug 8.5.26.png" id="1_yseyo"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_yseyo"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_413gl"]
+atlas = ExtResource("1_yseyo")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0xrea"]
+atlas = ExtResource("1_yseyo")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tyabi"]
+atlas = ExtResource("1_yseyo")
+region = Rect2(128, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_amal2"]
+atlas = ExtResource("1_yseyo")
+region = Rect2(0, 64, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yenwc"]
+atlas = ExtResource("1_yseyo")
+region = Rect2(64, 64, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dngrg"]
+atlas = ExtResource("1_yseyo")
+region = Rect2(128, 64, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nlvxq"]
+atlas = ExtResource("1_yseyo")
+region = Rect2(0, 128, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3aftm"]
+atlas = ExtResource("1_yseyo")
+region = Rect2(64, 128, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dum7s"]
+atlas = ExtResource("1_yseyo")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_dum7s"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_413gl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0xrea")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tyabi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_amal2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yenwc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dngrg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nlvxq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3aftm")
+}],
+"loop": true,
+"name": &"fly",
+"speed": 11.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dum7s")
+}],
+"loop": false,
+"name": &"idle",
+"speed": 0.0
+}]
+
+[node name="Companion" type="CharacterBody2D"]
+script = ExtResource("1_413gl")
+
+[node name="NavigationAgent2D" type="NavigationAgent2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_yseyo")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_dum7s")
+animation = &"fly"
+autoplay = "fly"
