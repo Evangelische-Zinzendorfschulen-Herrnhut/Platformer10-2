@@ -2713,7 +2713,7 @@ position = Vector2(100, 153)
 [node name="Background_Sky" type="Sprite2D" parent="Player"]
 z_index = -1
 texture_repeat = 2
-position = Vector2(16, -81)
+position = Vector2(16, -96)
 texture = ExtResource("4_ktfr2")
 region_enabled = true
 region_rect = Rect2(0, 0, 1000, 300)
@@ -2721,7 +2721,7 @@ region_rect = Rect2(0, 0, 1000, 300)
 [node name="Background_2" type="Sprite2D" parent="Player"]
 modulate = Color(0.4392157, 0.6392157, 0.73333335, 1)
 z_index = -1
-position = Vector2(16, 219)
+position = Vector2(16, 204)
 texture = ExtResource("5_44x8d")
 region_enabled = true
 region_rect = Rect2(0, 0, 1000, 300)
