@@ -81,7 +81,7 @@ animations = [{
 "texture": SubResource("AtlasTexture_rgyib")
 }],
 "loop": true,
-"name": &"idle",
+"name": &"idle_m",
 "speed": 3.0
 }, {
 "frames": [{
@@ -119,7 +119,7 @@ animations = [{
 "texture": SubResource("AtlasTexture_c35mf")
 }],
 "loop": true,
-"name": &"run",
+"name": &"run_m",
 "speed": 11.0
 }]
 
@@ -132,10 +132,8 @@ script = ExtResource("1_rkbax")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(3, -2)
 sprite_frames = SubResource("SpriteFrames_hg6s5")
-animation = &"run"
-autoplay = "idle"
-frame = 8
-frame_progress = 0.23440091
+animation = &"idle_m"
+autoplay = "idle_m"
 
 [node name="AnimatedSprite2D_old" type="AnimatedSprite2D" parent="."]
 visible = false
