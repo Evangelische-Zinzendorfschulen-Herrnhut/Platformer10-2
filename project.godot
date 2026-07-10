@@ -14,8 +14,8 @@ config/name="Platformer10-2"
 run/main_scene="uid://2vvep7bqnr1r"
 config/features=PackedStringArray("4.5", "GL Compatibility")
 boot_splash/use_filter=false
-boot_splash/image="uid://ckb1dhpjqm357"
-config/icon="uid://ckb1dhpjqm357"
+boot_splash/image="uid://brhmnksrywtdn"
+config/icon="uid://dqj3qxd7byn6c"
 boot_splash/minimum_display_time=1500
 
 [display]
@@ -54,4 +54,3 @@ change_skin={
 textures/canvas_textures/default_texture_filter=0
 renderer/rendering_method="gl_compatibility"
 renderer/rendering_method.mobile="gl_compatibility"
-2d/snap/snap_2d_transforms_to_pixel=true
