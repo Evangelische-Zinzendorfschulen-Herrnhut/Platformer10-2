@@ -1,10 +1,11 @@
-[gd_scene load_steps=12 format=4 uid="uid://2vvep7bqnr1r"]
+[gd_scene load_steps=13 format=4 uid="uid://2vvep7bqnr1r"]
 
 [ext_resource type="Texture2D" uid="uid://bbpvdtyehcu5c" path="res://assets/Pixel Art Platformer - Village Props v2.3.0/Texture/TX Tileset Ground.png" id="1_5gx2l"]
 [ext_resource type="PackedScene" uid="uid://dwm841xtadpl5" path="res://player/player.tscn" id="1_7lnir"]
 [ext_resource type="Texture2D" uid="uid://b1dcjmsap6ghs" path="res://assets/Pixel Art Platformer - Village Props v2.3.0/Texture/TX Village Props.png" id="2_vkbyq"]
 [ext_resource type="Texture2D" uid="uid://dfx1scct0eklx" path="res://assets/background/pixil-frame-0 (86)_edited.png" id="4_ktfr2"]
 [ext_resource type="Texture2D" uid="uid://b4qdlerwib3wl" path="res://assets/background/texture_white.png" id="5_44x8d"]
+[ext_resource type="Script" uid="uid://cn77sac1lbynx" path="res://level/background.gd" id="5_ivpvi"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_qohg2"]
 texture = ExtResource("1_5gx2l")
@@ -2655,16 +2656,17 @@ position = Vector2(100, 153)
 [node name="Background_Sky" type="Sprite2D" parent="Player"]
 z_index = -1
 texture_repeat = 2
-position = Vector2(16, -97)
+position = Vector2(0, -100)
 scale = Vector2(0.9, 0.9)
 texture = ExtResource("4_ktfr2")
 region_enabled = true
 region_rect = Rect2(0, 0, 1000, 300)
+script = ExtResource("5_ivpvi")
 
 [node name="Background_2" type="Sprite2D" parent="Player"]
 modulate = Color(0.4392157, 0.6392157, 0.73333335, 1)
 z_index = -1
-position = Vector2(16, 173)
+position = Vector2(0, 170.00002)
 scale = Vector2(0.9, 0.9)
 texture = ExtResource("5_44x8d")
 region_enabled = true
